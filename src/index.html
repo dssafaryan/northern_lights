@@ -2,25 +2,25 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Северное сияние</title>
-  <link rel="stylesheet" href="css/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=Jura:300|Ubuntu:300&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!-- .header — БЭМ-блок -->
   <header class="header">
     <div class="header__inner">
-      <div class="nav-burger nav-burger--close">
+      <div class="toggler" id="toggler">
         <span></span>
       </div>
-      <nav class="main-nav">
+      <nav class="main-nav" id="nav">
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a href="#" class="main-nav__link main-nav__link--active">Легенды</a></li>
-          <li class="main-nav__item"><a href="#" class="main-nav__link">Факты</a></li>
-          <li class="main-nav__item"><a href="#" class="main-nav__link">Где и когда</a></li>
-          <li class="main-nav__item"><a href="#" class="main-nav__link">Цены на отели</a></li>
-          <li class="main-nav__item"><a href="#" class="main-nav__link">Отзывы</a></li>
-          <li class="main-nav__item"><a href="#" class="main-nav__link">Контакты</a></li>
+          <li class="main-nav__item"><a href="#legends" class="main-nav__link main-nav__link--active">Легенды</a></li>
+          <li class="main-nav__item"><a href="#facts" class="main-nav__link">Факты</a></li>
+          <li class="main-nav__item"><a href="#places" class="main-nav__link">Где и когда</a></li>
+          <li class="main-nav__item"><a href="#price" class="main-nav__link">Цены на отели</a></li>
+          <li class="main-nav__item"><a href="#reviews" class="main-nav__link">Отзывы</a></li>
+          <li class="main-nav__item"><a href="#contacts" class="main-nav__link">Контакты</a></li>
         </ul>
       </nav>
 
@@ -35,9 +35,8 @@
       </div>
     </div>
   </header>
-<!-- end  .header — БЭМ-блока -->
   <main class="main">
-    <section class="slide-section">
+    <section class="slide-section" id="legends">
       <div class="slide-section__inner">
           <div class="slide-section__info">
             <h2 class="slide-section__title">Легенды народов севера о полярном сиянии</h2>
@@ -75,7 +74,7 @@
           </div>
       </div>
     </section>
-    <section class="facts">
+    <section class="facts" id="facts">
       <h2 class="facts__title">Факты о северном сиянии</h2>
       <ul class="facts__list">
         <li class="facts__item">Наблюдаются преимущественно в высоких широтах обоих полушариях</li>
@@ -83,20 +82,20 @@
         <li class="facts__item">Полярные сияния весной и осенью возникают заметно чаще, чем зимой и летом.</li>
       </ul>
     </section>
-    <section class="places">
+    <section class="places" id="places">
       <div class="places__map"><img src="" alt=""></div>
       <div class="places__info">
         <h2 class="places__title">Где и когда</h2>
         <ul class="places__list">
-          <li class="places__item places__item--summer">летом</li>
-          <li class="places__item places__item--winter">зимой</li>
-          <li class="places__item places__item--spring">весной</li>
-          <li class="places__item places__item--autumn">осенью</li>
+          <li class="places__item places__item--pink">летом</li>
+          <li class="places__item places__item--aqua">зимой</li>
+          <li class="places__item places__item--light-green">весной</li>
+          <li class="places__item places__item--orange">осенью</li>
         </ul>
         <p class="places__text">Наблюдать сияние можно в Якутске, Салехарде, Мурманске, на Таймыре и на Аляске. Наиболее часто полярное сияние встречается в областях близ Аляски, в Гудзоновом заливе, в Большом Медвежьем озере, Исландии, южной части Гренландии, на севере Норвегии и Сибири.</p>
       </div>
     </section>
-    <section class="reviews">
+    <section class="reviews" id="reviews">
       <h2 class="reviews__title"></h2>
       <div class="review">
         <img src="" alt="" class="review__photo">
@@ -109,14 +108,14 @@
         <p class="review__text">В зависимости от преобладающих в спектре полярного сияния линий излучения полярные сияния делятся на два типа: высотные полярные сияния типа A с преобладанием атомарных линий и полярные сияния типа B</p>
       </div>
       <div class="pagination">
-        <span class="pagination__item pagination__item--blue pagination__item--active-blue"></span>
-        <span class="pagination__item pagination__item--blue"></span>
-        <span class="pagination__item pagination__item--blue"></span>
-        <span class="pagination__item pagination__item--blue"></span>
-        <span class="pagination__item pagination__item--blue"></span>
+        <span class="pagination__item pagination__item--white pagination__item--active-blue"></span>
+        <span class="pagination__item pagination__item--white"></span>
+        <span class="pagination__item pagination__item--white"></span>
+        <span class="pagination__item pagination__item--white"></span>
+        <span class="pagination__item pagination__item--white"></span>
       </div>
     </section>
-    <section class="contacts">
+    <section class="contacts" id="contacts">
       <div class="contacts__inner">
         <h2 class="contacts__title">Контакты</h2>
         <div class="contacts__item">
@@ -168,7 +167,7 @@
         </div>
       </div>
     </section>
-    <section class="price">
+    <section class="price" id="price">
       <h2 class="price__title">Цены </h2>
       <ul class="price__list">
         <li class="price__item price__item--active"><a href="#finland">Финляндия</a></li>
@@ -178,8 +177,8 @@
         <li class="price__item"><a href="#iceland">Исландия</a></li>
         <li class="price__item"><a href="#murmansk">Мурманск</a></li>
       </ul>
-      <div class="tabs-content">
-        <table id="finland" class="tabs-content__item is-active">
+      <div class="price-content">
+        <table id="finland" class="price__table is-active">
           <tr>
             <th>Город</th>
             <th>Локация</th>
@@ -196,7 +195,7 @@
             <td>250 000 руб/чел</td>
           </tr>
         </table>
-        <table id="norway" class="tabs-content__item">
+        <table id="norway" class="price__table">
           <tr>
             <th>Город</th>
             <th>Локация</th>
@@ -213,7 +212,7 @@
             <td>250 000 руб/чел</td>
           </tr>
         </table>
-        <table id="yakutia" class="tabs-content__item">
+        <table id="yakutia" class="price__table">
           <tr>
             <th>Город</th>
             <th>Локация</th>
@@ -230,7 +229,7 @@
             <td>250 000 руб/чел</td>
           </tr>
         </table>
-        <table id="alaska" class="tabs-content__item">
+        <table id="alaska" class="price__table">
           <tr>
             <th>Город</th>
             <th>Локация</th>
@@ -247,7 +246,7 @@
             <td>250 000 руб/чел</td>
           </tr>
         </table>
-        <table id="iceland" class="tabs-content__item">
+        <table id="iceland" class="price__table">
           <tr>
             <th>Город</th>
             <th>Локация</th>
@@ -264,7 +263,7 @@
             <td>250 000 руб/чел</td>
           </tr>
         </table>
-        <table id="murmansk" class="tabs-content__item">
+        <table id="murmansk" class="price__table">
           <tr>
             <th>Город</th>
             <th>Локация</th>
@@ -288,5 +287,6 @@
   <footer class="page__footer">
     <p class="footer__info"><a href="tel=+79211234567">+7 (921) 123-45-67</a></p>
   </footer>
+<script src="js/script.min.js"></script>
 </body>
 </html>
