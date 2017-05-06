@@ -5,9 +5,17 @@
   overflow: hidden;
   min-height: 500px;
 
+
+  @media (min-width: $screen-sm) {
+    min-height: 660px;
+    background-position: 20% 80%;
+  }
+
   &__inner {
   padding-left: 10px;
   padding-right: 10px;
+  max-width: 1170px;
+  margin: 0 auto;
   }
 }
 
@@ -104,7 +112,7 @@
   position: absolute;
   left: -140px;
   min-width: 140px;
-  transition: all .8s ease;
+  transition: left .8s ease;
   padding-top: 98px;
   height: 100%;
 
@@ -112,7 +120,7 @@
     position: static;
     background-color: rgba(0,0,0,.3);
     padding-top: 0;
-
+    margin-top: 20px;
   }
 
   &--visible {
@@ -127,12 +135,14 @@
     flex-direction: row;
     justify-content: space-around;
     align-content: center;
+    padding: 12px 0;
+    margin: 0;
     }
   }
 
   &__item {
     list-style: none;
-    font-family: $font-family-jura;
+    font-family: $jura;
     font-size: $text-smallest;
     font-weight: 300;
     line-height: 2.57;
@@ -140,6 +150,7 @@
 
     @media (min-width: $screen-sm) {
       justify-content: space-around;
+      font-size: $text-small;
     }
   }
 
@@ -159,13 +170,24 @@
   color: $cyan;
   padding-top: 236px;
   margin-top: 0;
+
+  @media (min-width: $screen-sm) {
+    padding-top: 170px;
+    font-size: $text-extra-big;
+  }
+
   }
 
   &__description {
-  font-family: $font-family-jura;
+  font-family: $jura;
   font-size: $text-small;
   font-weight: $font-weight-l;
   color: $cyan;
+
+  @media (min-width: $screen-sm) {
+    font-size: $text-medium;
+  }
+
   }
 }
 
@@ -182,6 +204,10 @@
     display: none;
   }
 
+  @media (min-width: $screen-lg) {
+    display: block;
+  }
+
 
   &__link {
     transform: rotate(-90deg);
@@ -190,7 +216,7 @@
     text-decoration: none;
     color: $cyan;
     font-size: $text-12;
-    font-family: $font-family-ubuntu;
+    font-family: $ubuntu;
     font-weight: $font-weight-l;
   }
 }
