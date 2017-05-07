@@ -1,5 +1,6 @@
 .reviews {
   background-color: #b2dad0;
+  min-height: 270px;
 
   &__inner {
     max-width: 1170px;
@@ -20,6 +21,10 @@
 
 .review {
 
+  @media (min-width: $screen-sm) {
+      width: 50%;
+    }
+
   &__author {
     display: inline-block;
     vertical-align: top;
@@ -28,6 +33,11 @@
   img {
     width: 60px;
     height: 60px;
+
+    @media (min-width: $screen-sm) {
+     width: 105px;
+     height: 95px;
+    }
   }
 
   &__desc {
@@ -40,7 +50,7 @@
   }
 
   &__text {
-    width: 176px;
+    width: 172px;
     font-family: $ubuntu;
     font-size: $text-extra-small;
     font-weight: $font-weight-l;
@@ -52,6 +62,11 @@
     margin-top: 0;
     margin-left: 24px;
     position: relative;
+
+    @media (min-width: $screen-sm) {
+      margin-left: 40px;
+      width: 185px;
+    }
   }
 
   &__text:before {
@@ -68,5 +83,16 @@
 
   &:last-child {
     display: none;
+
+    @media (min-width: $screen-sm) {
+      display: block;
+    }
+  }
+
+  &__slider {
+
+    @media (min-width: $screen-sm) {
+      width: 100%;
+    }
   }
 }

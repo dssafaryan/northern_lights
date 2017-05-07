@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  @@include('img/sprite-svg.svg')
+
   <header class="header">
     <div class="header__inner">
       <div class="toggler" id="toggler">
@@ -30,7 +32,7 @@
       </div>
 
       <div class="side-bar">
-        <a href="#" class="social social--vk"></a>
+        <a href="#" class="social"><svg class="vk" width="25" height="15"><use xlink:href="#vk"></use></svg></a>
         <a href="#" class="side-bar__link">Больше фотографий</a>
       </div>
     </div>
@@ -94,198 +96,268 @@
         </div>
       <div class="places__map"><img src="img/facts-map.jpg" alt=""></div>
     </section>
-
-
     <section class="reviews" id="reviews">
       <div class="reviews__inner">
         <h2 class="reviews__title">Отзывы</h2>
-        <div class="review">
-          <div class="review__author">
-            <img src="img/authors-photo-review.jpg" alt="" class="review__photo">
-            <p class="review__desc">Игорь, о&nbsp;Финляндии</p>
+        <div class="review__slider">
+          <div class="review">
+            <div class="review__author">
+              <img src="img/authors-photo-review.jpg" alt="" class="review__photo">
+              <p class="review__desc">Игорь, о&nbsp;Финляндии</p>
+            </div>
+            <p class="review__text">В зависимости от преобладающих в спектре полярного сияния линий излучения полярные сияния делятся на два типа: высотные полярные сияния типа A с преобладанием атомарных линий и полярные сияния типа B</p>
           </div>
-          <p class="review__text">В зависимости от преобладающих в спектре полярного сияния линий излучения полярные сияния делятся на два типа: высотные полярные сияния типа A с преобладанием атомарных линий и полярные сияния типа B</p>
-        </div>
-        <div class="review">
-          <div class="review__author">
-            <img src="img/authors-photo-review.jpg" alt="" class="review__photo">
-            <p class="review__desc">Ярослав, о&nbsp;Якутии</p>
+          <div class="review">
+            <div class="review__author">
+              <img src="img/authors-photo-review.jpg" alt="" class="review__photo">
+              <p class="review__desc">Ярослав, о&nbsp;Якутии</p>
+            </div>
+            <p class="review__text">В зависимости от преобладающих в спектре полярного сияния линий излучения полярные сияния делятся на два типа: высотные полярные сияния типа A с преобладанием атомарных линий и полярные сияния типа B</p>
           </div>
-          <p class="review__text">В зависимости от преобладающих в спектре полярного сияния линий излучения полярные сияния делятся на два типа: высотные полярные сияния типа A с преобладанием атомарных линий и полярные сияния типа B</p>
+          <div class="review">
+            <div class="review__author">
+              <img src="img/authors-photo-review.jpg" alt="" class="review__photo">
+              <p class="review__desc">Игорь, о&nbsp;Финляндии</p>
+            </div>
+            <p class="review__text">В зависимости от преобладающих в спектре полярного сияния линий излучения полярные сияния делятся на два типа: высотные полярные сияния типа A с преобладанием атомарных линий и полярные сияния типа B</p>
+          </div>
+          <div class="review">
+            <div class="review__author">
+              <img src="img/authors-photo-review.jpg" alt="" class="review__photo">
+              <p class="review__desc">Игорь, о&nbsp;Финляндии</p>
+            </div>
+            <p class="review__text">В зависимости от преобладающих в спектре полярного сияния линий излучения полярные сияния делятся на два типа: высотные полярные сияния типа A с преобладанием атомарных линий и полярные сияния типа B</p>
+          </div>
+          <div class="review">
+            <div class="review__author">
+              <img src="img/authors-photo-review.jpg" alt="" class="review__photo">
+              <p class="review__desc">Игорь, о&nbsp;Финляндии</p>
+            </div>
+            <p class="review__text">В зависимости от преобладающих в спектре полярного сияния линий излучения полярные сияния делятся на два типа: высотные полярные сияния типа A с преобладанием атомарных линий и полярные сияния типа B</p>
+          </div>
         </div>
       </div>
     </section>
     <section class="contacts" id="contacts">
       <div class="contacts__inner">
         <h2 class="contacts__title">Контакты</h2>
-        <div class="contacts__item">
-          <h3 class="contacts__item-title">Финляндия</h3>
-          <p class="contacts__item-person">Менеджер направления: Артем Ливанов</p>
-          <a href="tel:+7812676700"  class="contacts__item-info">+7 (812) 67-67-00</a>
-          <a href="https://vk.com/muravei35"  class="contacts__item-info">vk.com/muravei35</a>
-          <a href="mailto:example@mail.com"  class="contacts__item-info">example@mail.com</a>
-        </div>
+        <div class="contacts__item-wrapper">
+          <div class="contacts__item">
+            <h3 class="contacts__item-title">Финляндия</h3>
+            <p class="contacts__item-info">Менеджер направления: Артем Ливанов</p>
+            <a href="tel:+7812676700"  class="contacts__item-info">+7 (812) 67-67-00</a>
+            <a href="https://vk.com/muravei35"  class="contacts__item-info">vk.com/muravei35</a>
+            <a href="mailto:example@mail.com"  class="contacts__item-info">example@mail.com</a>
+          </div>
+          <!-- Modal window -->
+            <!-- <div class="modal">
+              <div class="modal-content">
+                <p class="modal-content__title">Финляндия</p>
+                <p class="modal-content__text">Менеджер направления:  <br> Артем Ливанов</p>
+                <p class="modal-content__text">+7(812) 67-67-00</p>
+                <p class="modal-content__text">vk.com/muravei35</p>
+                <p class="modal-content__text">example@mail.com</p>
+                <span class="modal__close"></span>
+              </div>
+            </div> -->
+            <!-- The end of modal window -->
 
-        <div class="contacts__item">
-          <h3 class="contacts__item-title">Норвегия</h3>
-          <p class="contacts__item-person">Менеджер направления: Артем Ливанов</p>
-          <a href="tel:+7812676700"  class="contacts__item-info">+7 (812) 67-67-00</a>
-          <a href="https://vk.com/muravei35"  class="contacts__item-info">vk.com/muravei35</a>
-          <a href="mailto:example@mail.com"  class="contacts__item-info">example@mail.com</a>
-        </div>
+          <div class="contacts__item">
+            <h3 class="contacts__item-title">Норвегия</h3>
+            <p class="contacts__item-info">Менеджер направления: Артем Ливанов</p>
+            <a href="tel:+7812676700"  class="contacts__item-info">+7 (812) 67-67-00</a>
+            <a href="https://vk.com/muravei35"  class="contacts__item-info">vk.com/muravei35</a>
+            <a href="mailto:example@mail.com"  class="contacts__item-info">example@mail.com</a>
+          </div>
 
-        <div class="contacts__item">
-          <h3 class="contacts__item-title">Якутия</h3>
-          <p class="contacts__item-person">Менеджер направления: Артем Ливанов</p>
-          <a href="tel:+7812676700"  class="contacts__item-info">+7 (812) 67-67-00</a>
-          <a href="https://vk.com/muravei35"  class="contacts__item-info">vk.com/muravei35</a>
-          <a href="mailto:example@mail.com"  class="contacts__item-info">example@mail.com</a>
-        </div>
+          <div class="contacts__item">
+            <h3 class="contacts__item-title">Якутия</h3>
+            <p class="contacts__item-info">Менеджер направления: Артем Ливанов</p>
+            <a href="tel:+7812676700"  class="contacts__item-info">+7 (812) 67-67-00</a>
+            <a href="https://vk.com/muravei35"  class="contacts__item-info">vk.com/muravei35</a>
+            <a href="mailto:example@mail.com"  class="contacts__item-info">example@mail.com</a>
+          </div>
 
-        <div class="contacts__item">
-          <h3 class="contacts__item-title">Аляска</h3>
-          <p class="contacts__item-person">Менеджер направления: Артем Ливанов</p>
-          <a href="tel:+7812676700"  class="contacts__item-info">+7 (812) 67-67-00</a>
-          <a href="https://vk.com/muravei35"  class="contacts__item-info">vk.com/muravei35</a>
-          <a href="mailto:example@mail.com"  class="contacts__item-info">example@mail.com</a>
-        </div>
+          <div class="contacts__item">
+            <h3 class="contacts__item-title">Аляска</h3>
+            <p class="contacts__item-info">Менеджер направления: Артем Ливанов</p>
+            <a href="tel:+7812676700"  class="contacts__item-info">+7 (812) 67-67-00</a>
+            <a href="https://vk.com/muravei35"  class="contacts__item-info">vk.com/muravei35</a>
+            <a href="mailto:example@mail.com"  class="contacts__item-info">example@mail.com</a>
+          </div>
 
-        <div class="contacts__item">
-          <h3 class="contacts__item-title">Исландия</h3>
-          <p class="contacts__item-person">Менеджер направления: Артем Ливанов</p>
-          <a href="tel:+7812676700"  class="contacts__item-info">+7 (812) 67-67-00</a>
-          <a href="https://vk.com/muravei35"  class="contacts__item-info">vk.com/muravei35</a>
-          <a href="mailto:example@mail.com"  class="contacts__item-info">example@mail.com</a>
-        </div>
+          <div class="contacts__item">
+            <h3 class="contacts__item-title">Исландия</h3>
+            <p class="contacts__item-info">Менеджер направления: Артем Ливанов</p>
+            <a href="tel:+7812676700"  class="contacts__item-info">+7 (812) 67-67-00</a>
+            <a href="https://vk.com/muravei35"  class="contacts__item-info">vk.com/muravei35</a>
+            <a href="mailto:example@mail.com"  class="contacts__item-info">example@mail.com</a>
+          </div>
 
-        <div class="contacts__item">
-          <h3 class="contacts__item-title">Мурманск</h3>
-          <p class="contacts__item-person">Менеджер направления: Артем Ливанов</p>
-          <a href="tel:+7812676700"  class="contacts__item-info">+7 (812) 67-67-00</a>
-          <a href="https://vk.com/muravei35"  class="contacts__item-info">vk.com/muravei35</a>
-          <a href="mailto:example@mail.com"  class="contacts__item-info">example@mail.com</a>
+          <div class="contacts__item">
+            <h3 class="contacts__item-title">Мурманск</h3>
+            <p class="contacts__item-info">Менеджер направления: Артем Ливанов</p>
+            <a href="tel:+7812676700"  class="contacts__item-info">+7 (812) 67-67-00</a>
+            <a href="https://vk.com/muravei35"  class="contacts__item-info">vk.com/muravei35</a>
+            <a href="mailto:example@mail.com"  class="contacts__item-info">example@mail.com</a>
+          </div>
         </div>
       </div>
     </section>
+
     <section class="price" id="price">
-      <h2 class="price__title">Цены </h2>
-      <ul class="price__list">
-        <li class="price__item price__item--active"><a href="#finland">Финляндия</a></li>
-        <li class="price__item"><a href="#norway">Норвегия</a></li>
-        <li class="price__item"><a href="#yakutia">Якутия</a></li>
-        <li class="price__item"><a href="#alaska">Аляска</a></li>
-        <li class="price__item"><a href="#iceland">Исландия</a></li>
-        <li class="price__item"><a href="#murmansk">Мурманск</a></li>
-      </ul>
-      <div class="price-content">
-        <table id="finland" class="price__table is-active">
-          <tr>
-            <th>Город</th>
-            <th>Локация</th>
-            <th>Стоимость</th>
-          </tr>
-          <tr>
-            <td>Осло</td>
-            <td>Отель “Сияние”, 5 км от города</td>
-            <td>250 000 руб/чел</td>
-          </tr>
-          <tr>
-            <td>Осло</td>
-            <td>Отель “Сияние”, 5 км от города</td>
-            <td>250 000 руб/чел</td>
-          </tr>
-        </table>
-        <table id="norway" class="price__table">
-          <tr>
-            <th>Город</th>
-            <th>Локация</th>
-            <th>Стоимость</th>
-          </tr>
-          <tr>
-            <td>Осло</td>
-            <td>Отель “Сияние”, 5 км от города</td>
-            <td>250 000 руб/чел</td>
-          </tr>
-          <tr>
-            <td>Осло</td>
-            <td>Отель “Сияние”, 5 км от города</td>
-            <td>250 000 руб/чел</td>
-          </tr>
-        </table>
-        <table id="yakutia" class="price__table">
-          <tr>
-            <th>Город</th>
-            <th>Локация</th>
-            <th>Стоимость</th>
-          </tr>
-          <tr>
-            <td>Осло</td>
-            <td>Отель “Сияние”, 5 км от города</td>
-            <td>250 000 руб/чел</td>
-          </tr>
-          <tr>
-            <td>Осло</td>
-            <td>Отель “Сияние”, 5 км от города</td>
-            <td>250 000 руб/чел</td>
-          </tr>
-        </table>
-        <table id="alaska" class="price__table">
-          <tr>
-            <th>Город</th>
-            <th>Локация</th>
-            <th>Стоимость</th>
-          </tr>
-          <tr>
-            <td>Осло</td>
-            <td>Отель “Сияние”, 5 км от города</td>
-            <td>250 000 руб/чел</td>
-          </tr>
-          <tr>
-            <td>Осло</td>
-            <td>Отель “Сияние”, 5 км от города</td>
-            <td>250 000 руб/чел</td>
-          </tr>
-        </table>
-        <table id="iceland" class="price__table">
-          <tr>
-            <th>Город</th>
-            <th>Локация</th>
-            <th>Стоимость</th>
-          </tr>
-          <tr>
-            <td>Осло</td>
-            <td>Отель “Сияние”, 5 км от города</td>
-            <td>250 000 руб/чел</td>
-          </tr>
-          <tr>
-            <td>Осло</td>
-            <td>Отель “Сияние”, 5 км от города</td>
-            <td>250 000 руб/чел</td>
-          </tr>
-        </table>
-        <table id="murmansk" class="price__table">
-          <tr>
-            <th>Город</th>
-            <th>Локация</th>
-            <th>Стоимость</th>
-          </tr>
-          <tr>
-            <td>Осло</td>
-            <td>Отель “Сияние”, 5 км от города</td>
-            <td>250 000 руб/чел</td>
-          </tr>
-          <tr>
-            <td>Осло</td>
-            <td>Отель “Сияние”, 5 км от города</td>
-            <td>250 000 руб/чел</td>
-          </tr>
-        </table>
+      <div class="price__inner">
+        <h2 class="price__title">Цены </h2>
+        <ul class="price__list price__list--desktop">
+          <li class="price__item"><a href="#finland" class="price__link price__link--active">Финляндия</a></li>
+          <li class="price__item"><a href="#norway" class="price__link">Норвегия</a></li>
+          <li class="price__item"><a href="#yakutia" class="price__link">Якутия</a></li>
+          <li class="price__item"><a href="#alaska" class="price__link">Аляска</a></li>
+          <li class="price__item"><a href="#iceland" class="price__link">Исландия</a></li>
+          <li class="price__item"><a href="#murmansk" class="price__link">Мурманск</a></li>
+        </ul>
+        <ul class="price__list price__list--mobile">
+          <li class="price__item"><a href="#finland">Финляндия</a>
+          <div class="price__content">
+            <table border="1" id="finland" class="price__table is-active">
+              <tr>
+                <th>Город</th>
+                <th>Локация</th>
+                <th>Стоимость</th>
+              </tr>
+              <tr>
+                <td>Осло</td>
+                <td>Отель “Сияние”, 5 км от города</td>
+                <td>250 000 руб/чел</td>
+              </tr>
+              <tr>
+                <td>Осло</td>
+                <td>Отель “Сияние”, 5 км от города</td>
+                <td>250 000 руб/чел</td>
+              </tr>
+            </table>
+          </div>
+          <a href="#" class="offers">Посмотреть все предложения по Финляндии</a>
+          </li>
+          <li class="price__item"><a href="#norway">Норвегия</a></li>
+          <li class="price__item"><a href="#yakutia">Якутия</a></li>
+          <li class="price__item"><a href="#alaska">Аляска</a></li>
+          <li class="price__item"><a href="#iceland">Исландия</a></li>
+          <li class="price__item"><a href="#murmansk">Мурманск</a></li>
+        </ul>
+        <div class="price__content">
+          <table border="1" id="finland" class="price__table is-active">
+            <tr>
+              <th>Город</th>
+              <th>Локация</th>
+              <th>Стоимость</th>
+            </tr>
+            <tr>
+              <td>Осло</td>
+              <td>Отель “Сияние”, 5 км от города</td>
+              <td>250 000 руб/чел</td>
+            </tr>
+            <tr>
+              <td>Осло</td>
+              <td>Отель “Сияние”, 5 км от города</td>
+              <td>250 000 руб/чел</td>
+            </tr>
+          </table>
+          <!-- <table id="norway" class="price__table">
+            <tr>
+              <th>Город</th>
+              <th>Локация</th>
+              <th>Стоимость</th>
+            </tr>
+            <tr>
+              <td>Осло</td>
+              <td>Отель “Сияние”, 5 км от города</td>
+              <td>250 000 руб/чел</td>
+            </tr>
+            <tr>
+              <td>Осло</td>
+              <td>Отель “Сияние”, 5 км от города</td>
+              <td>250 000 руб/чел</td>
+            </tr>
+          </table>
+          <table id="yakutia" class="price__table">
+            <tr>
+              <th>Город</th>
+              <th>Локация</th>
+              <th>Стоимость</th>
+            </tr>
+            <tr>
+              <td>Осло</td>
+              <td>Отель “Сияние”, 5 км от города</td>
+              <td>250 000 руб/чел</td>
+            </tr>
+            <tr>
+              <td>Осло</td>
+              <td>Отель “Сияние”, 5 км от города</td>
+              <td>250 000 руб/чел</td>
+            </tr>
+          </table>
+          <table id="alaska" class="price__table">
+            <tr>
+              <th>Город</th>
+              <th>Локация</th>
+              <th>Стоимость</th>
+            </tr>
+            <tr>
+              <td>Осло</td>
+              <td>Отель “Сияние”, 5 км от города</td>
+              <td>250 000 руб/чел</td>
+            </tr>
+            <tr>
+              <td>Осло</td>
+              <td>Отель “Сияние”, 5 км от города</td>
+              <td>250 000 руб/чел</td>
+            </tr>
+          </table>
+          <table id="iceland" class="price__table">
+            <tr>
+              <th>Город</th>
+              <th>Локация</th>
+              <th>Стоимость</th>
+            </tr>
+            <tr>
+              <td>Осло</td>
+              <td>Отель “Сияние”, 5 км от города</td>
+              <td>250 000 руб/чел</td>
+            </tr>
+            <tr>
+              <td>Осло</td>
+              <td>Отель “Сияние”, 5 км от города</td>
+              <td>250 000 руб/чел</td>
+            </tr>
+          </table>
+          <table id="murmansk" class="price__table">
+            <tr>
+              <th>Город</th>
+              <th>Локация</th>
+              <th>Стоимость</th>
+            </tr>
+            <tr>
+              <td>Осло</td>
+              <td>Отель “Сияние”, 5 км от города</td>
+              <td>250 000 руб/чел</td>
+            </tr>
+            <tr>
+              <td>Осло</td>
+              <td>Отель “Сияние”, 5 км от города</td>
+              <td>250 000 руб/чел</td>
+            </tr>
+          </table> -->
+        </div>
+        <a href="#" class="offers">Посмотреть все предложения по Финляндии</a>
       </div>
-      <a href="#" class="offers">Посмотреть все предложения по Финляндии</a>
     </section>
+
   </main>
-  <footer class="page__footer">
-    <p class="footer__info"><a href="tel=+79211234567">+7 (921) 123-45-67</a></p>
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__info">Телефон для справок: <a href="tel:+79211234567">+7 (921) 123-45-67</a></p>
+    </div>
   </footer>
 <script src="js/script.min.js"></script>
 </body>

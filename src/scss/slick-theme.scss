@@ -110,12 +110,6 @@ $slick-opacity-not-active: 0.25 !default;
     }
 }
 
-/* Dots */
-
-.slick-dotted.slick-slider {
-    margin-bottom: 30px;
-}
-
 .slick-dots {
     position: absolute;
     bottom: -40px;
@@ -125,6 +119,10 @@ $slick-opacity-not-active: 0.25 !default;
     margin: 0;
     left: -13px;
     width: 100%;
+
+    @media (min-width: 768px) {
+      left: 26px;
+    }
     li {
         position: relative;
         display: inline-block;
@@ -175,3 +173,97 @@ $slick-opacity-not-active: 0.25 !default;
         }
     }
 }
+
+
+.review__slider .slick-dots {
+    position: absolute;
+    bottom: -25px;
+    list-style: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+    left: 100px;
+    width: 100%;
+    max-width: 200px;
+
+    @media (min-width: 768px) {
+      left: 38%;
+    }
+
+    li {
+        position: relative;
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        margin: 0 12px;
+        padding: 0;
+        cursor: pointer;
+        background-color: #f7f7f7;
+        button {
+            border: 0;
+            background: transparent;
+            display: block;
+            height: 15px;
+            width: 15px;
+            outline: none;
+            line-height: 0px;
+            font-size: 0px;
+            color: transparent;
+            padding: 5px;
+            cursor: pointer;
+            &:hover, &:focus {
+                outline: none;
+                &:before {
+                    opacity: $slick-opacity-on-hover;
+                }
+            }
+            &:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content:'';
+                width: 15px;
+                height: 15px;
+                font-family: $slick-font-family;
+                font-size: $slick-dot-size;
+                line-height: 15px;
+                text-align: center;
+                color: $slick-dot-color;
+                opacity: $slick-opacity-not-active;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+        &.slick-active button:before {
+            background-color: #2f4159;
+            opacity: 1;
+        }
+    }
+}
+
+
+.slick-prev,
+.slick-arrow {
+  display: none;
+
+  @media (min-width: 768px) {
+    background-image: url('../img/sprite-svg.svg');
+    display: block;
+    width: 32px;
+    height: 36px;
+    }
+
+  &:before,
+  &:after {
+    display: none;
+  }
+}
+
+.slick-next {
+  right: 0;
+}
+
+.slick-prev {
+  left: 0;
+}
+

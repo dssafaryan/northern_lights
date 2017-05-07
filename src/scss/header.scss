@@ -1,3 +1,14 @@
+body {
+  @media (min-width: $screen-sm) {
+    background-color: #eaeaec;
+  }
+
+  @media (min-width: $screen-lg) {
+    background-color: #ffffff;
+  }
+
+}
+
 .header {
   background: url(../img/bg-header.jpg) no-repeat;
   background-size: cover;
@@ -7,8 +18,8 @@
 
 
   @media (min-width: $screen-sm) {
-    min-height: 660px;
-    background-position: 20% 80%;
+    min-height: 600px;
+    background-size: inherit;
   }
 
   &__inner {
@@ -148,7 +159,7 @@
     line-height: 2.57;
     color: $cyan;
 
-    @media (min-width: $screen-sm) {
+    @media (min-width: $screen-lg) {
       justify-content: space-around;
       font-size: $text-small;
     }
@@ -174,6 +185,8 @@
   @media (min-width: $screen-sm) {
     padding-top: 170px;
     font-size: $text-extra-big;
+    padding-left: 88px;
+    margin-bottom: 18px;
   }
 
   }
@@ -186,6 +199,7 @@
 
   @media (min-width: $screen-sm) {
     font-size: $text-medium;
+    padding-left: 88px;
   }
 
   }
@@ -219,4 +233,10 @@
     font-family: $ubuntu;
     font-weight: $font-weight-l;
   }
+}
+
+.social {
+  position: absolute;
+  top: 24px;
+  left: 7px;
 }

@@ -1,0 +1,26 @@
+.footer {
+  min-height: 60px;
+  background-color: #201b38;
+
+  &__inner {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__info {
+    font-family: $ubuntu;
+    font-size: $text-12;
+    font-weight: $font-weight-l;
+    line-height: 3;
+    color: #ffffff;
+  }
+
+  &__info a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 36px;
+  }
+}

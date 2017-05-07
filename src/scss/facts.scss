@@ -1,5 +1,6 @@
 .facts {
   background-color: #f7f7f7;
+  overflow: hidden;
 
   &__inner {
     max-width: 1170px;
@@ -21,6 +22,13 @@
   &__list {
     padding-left: 21px;
     list-style: none;
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #89c1a1;
+      padding: 0;
+    }
   }
 
   &__item {
@@ -31,6 +39,12 @@
     line-height: 1.52;
     position: relative;
     color: $violet-dark;
+
+    @media (min-width: $screen-sm) {
+      width: 30%;
+      padding-top: 14px;
+      padding-bottom: 0px;
+    }
   }
 
   &__item:before {
@@ -43,6 +57,11 @@
     top: -14px;
     z-index: 1;
     left: -23px;
+
+    @media (min-width: $screen-sm) {
+      top: -5px;
+      left: 0;
+    }
   }
 
   &__item:nth-child(-n+2):after {
@@ -54,10 +73,18 @@
     left: -19px;
     width: 1px;
     height: 100%;
+
+    @media (min-width: $screen-sm) {
+      display: none;
+    }
   }
 
   &__item:last-child {
     padding-bottom: 54px;
+
+    @media (min-width: $screen-sm) {
+      padding-bottom: 0px;
+    }
   }
 
   &__number {

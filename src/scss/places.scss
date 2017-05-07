@@ -1,4 +1,11 @@
 .places {
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 
   &__inner {
     max-width: 1170px;
@@ -16,8 +23,10 @@
   }
 
   &__info {
-    @media (min-width: $screen-sm) {
 
+    @media (min-width: $screen-sm) {
+      width: 43%;
+      float: right;
     }
   }
 
@@ -72,10 +81,10 @@
   }
 
   &__list--mobile {
-  display: none;
+    display: none;
 
   @media (min-width: $screen-sm) {
-  display: flex;
+    display: flex;
   }
   }
 
@@ -94,11 +103,18 @@
     img {
       width: 100%;
       height: auto;
-      min-height: 334px;
+      min-height: 330px;
+      max-width: 670px;
+
+      @media (min-width: $screen-sm) {
+        max-width: 428px;
+        max-height: 330px;
+      }
     }
 
     @media (min-width: $screen-sm) {
-
+      width: 55%;
+      float: left;
     }
   }
 }
