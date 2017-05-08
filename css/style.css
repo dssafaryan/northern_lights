@@ -796,6 +796,11 @@ template {
   top: 24px;
   left: 7px; }
 
+.sprite-slider-arrow {
+  width: 50px;
+  height: 56px;
+  background-position: -5px -5px; }
+
 .slide-section:after {
   content: '';
   display: table;
@@ -811,7 +816,6 @@ template {
   background: url("../img/slide-section__visual.jpg") no-repeat;
   background-size: cover;
   min-height: 400px;
-  overflow: hidden;
   box-sizing: border-box; }
 
 .slide-section__title {
@@ -1002,7 +1006,7 @@ template {
   color: #212027; }
 
 .review__text {
-  width: 172px;
+  width: 58%;
   font-family: "Ubuntu", sans-serif;
   font-size: 10px;
   font-weight: 300;
@@ -1053,12 +1057,14 @@ template {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -ms-flex-pack: justify;
-        justify-content: space-between; }
+        justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 20px; }
   .contacts__item {
     position: relative;
     width: 45%;
-    padding-top: 24px;
-    height: 20px;
+    padding-bottom: 24px;
+    height: 15px;
     padding-left: 8px; }
   .contacts__item:before {
     content: '';
@@ -1068,7 +1074,7 @@ template {
     width: 10px;
     height: 10px;
     background-color: #89c1a1;
-    top: 43px;
+    top: 19px;
     left: 4px; }
   .contacts__item:nth-child(n) {
     -ms-flex-order: 1;
@@ -1097,6 +1103,64 @@ template {
     margin-left: 20px; }
   .contacts__item-info {
     display: none; }
+
+.modal__layer {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: fixed;
+  width: 100%;
+  height: 100%; }
+
+.modal__contact {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #fff;
+  width: 300px;
+  height: 220px;
+  z-index: 100; }
+
+.modal__close {
+  display: block;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  background-position: -65px -5px; }
+
+.modal-content__title {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Jura", sans-serif;
+  color: #000;
+  position: relative;
+  font-weight: 300;
+  padding-left: 35%; }
+  .modal-content__title:before {
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #89c1a1;
+    top: 6px;
+    left: 28%; }
+
+.modal-content__text {
+  padding-left: 28%;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 12px;
+  color: #000;
+  font-weight: 300;
+  line-height: 22px; }
 
 .price {
   min-height: 520px; }
@@ -1155,20 +1219,22 @@ template {
     display: none; }
   .price__table {
     text-align: center;
-    border-collapse: collapse;
-    border: 1px solid #d0d0d0; }
+    border: 1px solid #d0d0d0;
+    border-collapse: collapse; }
     .price__table th {
       font-family: "Ubuntu", sans-serif;
       font-size: 10px;
       font-weight: 700;
       line-height: 2.34;
       color: #201c38;
-      padding: 8px 28px; }
+      padding: 8px 28px;
+      border-right: 1px solid #d0d0d0; }
     .price__table td {
       font-family: "Ubuntu", sans-serif;
       font-size: 10px;
       font-weight: 300;
       line-height: 1.6;
+      border-right: 1px solid #d0d0d0;
       color: #201c38;
       padding: 6px 8px; }
 
@@ -1205,15 +1271,59 @@ template {
     margin-left: 36px; }
   @media (min-width: 768px){
   .slick-dots{
-    left: 26px; }
+    left: 44px; }
+  .slick-dots li{
+    width: 10px;
+    margin: 0 8px;
+    height: 10px; }
+  .slick-dots li button{
+    width: 10px;
+    height: 10px; }
+  .slick-dots li button:before{
+    width: 10px;
+    height: 10px; }
   .review__slider .slick-dots{
-    left: 38%; }
+    left: 40%; }
+  .review__slider .slick-dots li{
+    width: 10px;
+    height: 10px;
+    margin: 0 8px; }
+  .review__slider .slick-dots li button{
+    width: 10px;
+    height: 10px; }
+  .review__slider .slick-dots li button:before{
+    width: 10px;
+    height: 10px; }
   .slick-prev,
-    .slick-arrow{
-    background-image: url("../img/sprite-svg.svg");
-    display: block;
-    width: 32px;
-    height: 36px; }
+  .slick-arrow{
+    display: block; }
+  .slick-prev:before, .slick-prev:after,
+    .slick-arrow:before,
+    .slick-arrow:after{
+    display: block; }
+  .slick-prev{
+    left: 0;
+    top: 49%;
+    z-index: 1; }
+  .slick-prev:before{
+    content: "";
+    width: 33px;
+    height: 38px;
+    background-image: url("../img/a-tablet.png");
+    background-repeat: no-repeat;
+    background-size: 100%; }
+  .slick-next{
+    right: -40px;
+    top: 48%;
+    z-index: 1; }
+  .slick-next:before{
+    content: "";
+    width: 33px;
+    height: 38px;
+    background-image: url("../img/a-tablet.png");
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+    background-size: 100%; }
   body{
     background-color: #eaeaec; }
   .header{
@@ -1251,18 +1361,23 @@ template {
     width: 50%;
     display: inline-block;
     float: left;
-    background: none; }
+    background: none;
+    min-height: 344px; }
   .slide-section__title{
     color: #201c38; }
   .slide-section__visual{
     display: inline-block;
     width: 50%;
     float: right;
-    background: none; }
+    background: none;
+    min-height: 344px;
+    line-height: 0; }
+  .slider__item{
+    padding: 0 0 0 16px; }
   .slider__text{
     color: #201c38;
     float: right;
-    width: 89%; }
+    width: 90%; }
   .facts__list{
     display: -ms-flexbox;
     display: flex;
@@ -1295,18 +1410,32 @@ template {
   .places__map{
     width: 55%;
     float: left; }
-  .review{
-    width: 50%; }
   .review img{
     width: 105px;
     height: 95px; }
+  .review__desc{
+    width: 100%; }
   .review__text{
-    margin-left: 40px;
-    width: 185px; }
+    margin-left: 36px;
+    width: 48%; }
   .review:last-child{
     display: block; }
   .review__slider{
     width: 100%; }
+  .contacts__item-wrapper{
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+  .contacts__item{
+    width: 23.8%;
+    height: 100%; }
+  .contacts__item-info{
+    display: block;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.67;
+    color: #ffffff;
+    text-decoration: none; }
   .price__list--mobile{
     display: -ms-flexbox;
     display: flex; }
