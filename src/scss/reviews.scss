@@ -21,10 +21,6 @@
 
 .review {
 
-  @media (min-width: $screen-sm) {
-      width: 50%;
-    }
-
   &__author {
     display: inline-block;
     vertical-align: top;
@@ -47,10 +43,14 @@
     line-height: 1.44;
     width: 64px;
     color: #212027;
+
+    @media (min-width: $screen-sm) {
+      width: 100%;
+    }
   }
 
   &__text {
-    width: 172px;
+    width: 58%;
     font-family: $ubuntu;
     font-size: $text-extra-small;
     font-weight: $font-weight-l;
@@ -64,8 +64,8 @@
     position: relative;
 
     @media (min-width: $screen-sm) {
-      margin-left: 40px;
-      width: 185px;
+      margin-left: 36px;
+      width: 48%;
     }
   }
 

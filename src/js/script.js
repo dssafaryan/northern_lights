@@ -16,7 +16,7 @@ $('.slider').slick({
   speed: 300,
   slidesToShow: 1,
   adaptiveHeight: true,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 2000,
 });
 
@@ -24,10 +24,12 @@ $('.review__slider').slick({
   dots: true,
   infinite: true,
   speed: 300,
-  slidesToShow: 1,
+  slidesToShow: 2,
   adaptiveHeight: true,
   autoplay: false,
   autoplaySpeed: 2000,
+  slidesToScroll: 1,
+  arrows: false,
   responsive: [
     {
       breakpoint: 768,
@@ -59,21 +61,21 @@ $('.review__slider').slick({
 //   });
 
 
-// // Script for modal link
-//   $('#contact-link').on('click', function(event) {
-//     event.preventDefault();
+$('.contacts__item-title').click(function(){
 
-//    $('.modal').show();
+  var getN = $(this).attr('data-value-modal-number');
 
-//     $('.modal__close').one('click', function() {
-//       $(this).closest('.modal').hide();
+  $('.modal__contact-'+getN).fadeIn(300);
 
-//     $('.modal').on('click', function(event) {
-//       if($(event.target).hasClass('modal')) {
-//         $(this).closest('.modal').hide();}
-//     })
-//   });
+  $('.modal__layer').fadeIn(300);
 
+});
 
-  // });
+function hideModalContent(n)
+{
+  $('.modal__contact-'+n).fadeOut(300);
+
+  $('.modal__layer').fadeOut(300);
+}
+
 

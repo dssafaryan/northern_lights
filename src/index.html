@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="modal__layer"></div>
   @@include('img/sprite-svg.svg')
 
   <header class="header">
@@ -138,32 +139,75 @@
         </div>
       </div>
     </section>
-    <section class="contacts" id="contacts">
-      <div class="contacts__inner">
-        <h2 class="contacts__title">Контакты</h2>
-        <div class="contacts__item-wrapper">
-          <div class="contacts__item">
-            <h3 class="contacts__item-title">Финляндия</h3>
-            <p class="contacts__item-info">Менеджер направления: Артем Ливанов</p>
-            <a href="tel:+7812676700"  class="contacts__item-info">+7 (812) 67-67-00</a>
-            <a href="https://vk.com/muravei35"  class="contacts__item-info">vk.com/muravei35</a>
-            <a href="mailto:example@mail.com"  class="contacts__item-info">example@mail.com</a>
-          </div>
-          <!-- Modal window -->
-            <!-- <div class="modal">
+    <!-- Modal window -->
+            <div class="modal__contact modal__contact-1">
               <div class="modal-content">
                 <p class="modal-content__title">Финляндия</p>
                 <p class="modal-content__text">Менеджер направления:  <br> Артем Ливанов</p>
                 <p class="modal-content__text">+7(812) 67-67-00</p>
                 <p class="modal-content__text">vk.com/muravei35</p>
                 <p class="modal-content__text">example@mail.com</p>
-                <span class="modal__close"></span>
+                <span class="modal__close" onClick="hideModalContent(1)"></span>
               </div>
-            </div> -->
-            <!-- The end of modal window -->
+            </div>
+            <div class="modal__contact modal__contact-2">
+              <div class="modal-content">
+                <p class="modal-content__title">Норвегия</p>
+                <p class="modal-content__text">Менеджер направления:  <br> Артем Ливанов</p>
+                <p class="modal-content__text">+7(812) 67-67-00</p>
+                <p class="modal-content__text">vk.com/muravei35</p>
+                <p class="modal-content__text">example@mail.com</p>
+                <span class="modal__close" onClick="hideModalContent(2)"></span>
+              </div>
+            </div>
+            <div class="modal__contact modal__contact-3">
+              <div class="modal-content">
+                <p class="modal-content__title">Якутия</p>
+                <p class="modal-content__text">Менеджер направления:  <br> Артем Ливанов</p>
+                <p class="modal-content__text">+7(812) 67-67-00</p>
+                <p class="modal-content__text">vk.com/muravei35</p>
+                <p class="modal-content__text">example@mail.com</p>
+                <span class="modal__close" onClick="hideModalContent(3)"></span>
+              </div>
+            </div>
+            <div class="modal__contact modal__contact-4">
+              <div class="modal-content">
+                <p class="modal-content__title">Аляска</p>
+                <p class="modal-content__text">Менеджер направления:  <br> Артем Ливанов</p>
+                <p class="modal-content__text">+7(812) 67-67-00</p>
+                <p class="modal-content__text">vk.com/muravei35</p>
+                <p class="modal-content__text">example@mail.com</p>
+                <span class="modal__close" onClick="hideModalContent(4)"></span>
+              </div>
+            </div>
+            <div class="modal__contact modal__contact-5">
+              <div class="modal-content">
+                <p class="modal-content__title">Исландия</p>
+                <p class="modal-content__text">Менеджер направления:  <br> Артем Ливанов</p>
+                <p class="modal-content__text">+7(812) 67-67-00</p>
+                <p class="modal-content__text">vk.com/muravei35</p>
+                <p class="modal-content__text">example@mail.com</p>
+                <span class="modal__close" onClick="hideModalContent(5)"></span>
+              </div>
+            </div>
+            <div class="modal__contact modal__contact-6">
+              <div class="modal-content">
+                <p class="modal-content__title">Мурманск</p>
+                <p class="modal-content__text">Менеджер направления:  <br> Артем Ливанов</p>
+                <p class="modal-content__text">+7(812) 67-67-00</p>
+                <p class="modal-content__text">vk.com/muravei35</p>
+                <p class="modal-content__text">example@mail.com</p>
+                <span class="modal__close" onClick="hideModalContent(6)"></span>
+              </div>
+            </div>
 
+    <!-- The end of modal window -->
+    <section class="contacts" id="contacts">
+      <div class="contacts__inner">
+        <h2 class="contacts__title">Контакты</h2>
+        <div class="contacts__item-wrapper">
           <div class="contacts__item">
-            <h3 class="contacts__item-title">Норвегия</h3>
+            <h3 class="contacts__item-title" data-value-modal-number='1'>Финляндия</h3>
             <p class="contacts__item-info">Менеджер направления: Артем Ливанов</p>
             <a href="tel:+7812676700"  class="contacts__item-info">+7 (812) 67-67-00</a>
             <a href="https://vk.com/muravei35"  class="contacts__item-info">vk.com/muravei35</a>
@@ -171,7 +215,7 @@
           </div>
 
           <div class="contacts__item">
-            <h3 class="contacts__item-title">Якутия</h3>
+            <h3 class="contacts__item-title" data-value-modal-number='2'>Норвегия</h3>
             <p class="contacts__item-info">Менеджер направления: Артем Ливанов</p>
             <a href="tel:+7812676700"  class="contacts__item-info">+7 (812) 67-67-00</a>
             <a href="https://vk.com/muravei35"  class="contacts__item-info">vk.com/muravei35</a>
@@ -179,7 +223,7 @@
           </div>
 
           <div class="contacts__item">
-            <h3 class="contacts__item-title">Аляска</h3>
+            <h3 class="contacts__item-title" data-value-modal-number='3'>Якутия</h3>
             <p class="contacts__item-info">Менеджер направления: Артем Ливанов</p>
             <a href="tel:+7812676700"  class="contacts__item-info">+7 (812) 67-67-00</a>
             <a href="https://vk.com/muravei35"  class="contacts__item-info">vk.com/muravei35</a>
@@ -187,7 +231,7 @@
           </div>
 
           <div class="contacts__item">
-            <h3 class="contacts__item-title">Исландия</h3>
+            <h3 class="contacts__item-title" data-value-modal-number='4'>Аляска</h3>
             <p class="contacts__item-info">Менеджер направления: Артем Ливанов</p>
             <a href="tel:+7812676700"  class="contacts__item-info">+7 (812) 67-67-00</a>
             <a href="https://vk.com/muravei35"  class="contacts__item-info">vk.com/muravei35</a>
@@ -195,7 +239,15 @@
           </div>
 
           <div class="contacts__item">
-            <h3 class="contacts__item-title">Мурманск</h3>
+            <h3 class="contacts__item-title" data-value-modal-number='5'>Исландия</h3>
+            <p class="contacts__item-info">Менеджер направления: Артем Ливанов</p>
+            <a href="tel:+7812676700"  class="contacts__item-info">+7 (812) 67-67-00</a>
+            <a href="https://vk.com/muravei35"  class="contacts__item-info">vk.com/muravei35</a>
+            <a href="mailto:example@mail.com"  class="contacts__item-info">example@mail.com</a>
+          </div>
+
+          <div class="contacts__item">
+            <h3 class="contacts__item-title" data-value-modal-number='6'>Мурманск</h3>
             <p class="contacts__item-info">Менеджер направления: Артем Ливанов</p>
             <a href="tel:+7812676700"  class="contacts__item-info">+7 (812) 67-67-00</a>
             <a href="https://vk.com/muravei35"  class="contacts__item-info">vk.com/muravei35</a>
