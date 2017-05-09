@@ -18,9 +18,9 @@
       </div>
       <nav class="main-nav" id="nav">
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a href="#legends" class="main-nav__link main-nav__link--active">Легенды</a></li>
-          <li class="main-nav__item"><a href="#facts" class="main-nav__link">Факты</a></li>
-          <li class="main-nav__item"><a href="#places" class="main-nav__link">Где и когда</a></li>
+          <li class="main-nav__item"><span onclick="goId('legends')" class="main-nav__link main-nav__link--active">Легенды</span></li>
+          <li class="main-nav__item"><span onclick="goId('facts')" class="main-nav__link">Факты</a></li>
+          <li class="main-nav__item"><span onclick="goId('places')" class="main-nav__link">Где и когда</a></li>
           <li class="main-nav__item"><a href="#price" class="main-nav__link">Цены на отели</a></li>
           <li class="main-nav__item"><a href="#reviews" class="main-nav__link">Отзывы</a></li>
           <li class="main-nav__item"><a href="#contacts" class="main-nav__link">Контакты</a></li>
@@ -39,9 +39,8 @@
     </div>
   </header>
   <main class="main">
-    <section class="slide-section">
+    <section class="slide-section" id="legends">
       <div class="slide-section__inner">
-        <a name="legends"></a>
           <div class="slide-section__info">
             <h2 class="slide-section__title">Легенды народов севера о полярном&nbsp;сиянии</h2>
             <div class="slider">
@@ -69,7 +68,6 @@
     </section>
     <section class="facts" id="facts">
       <div class="facts__inner">
-      <a name="facts"></a>
         <h2 class="facts__title">Факты о северном сиянии</h2>
         <ul class="facts__list">
           <li class="facts__item"><span class="facts__number">01</span>Наблюдаются преимущественно в высоких широтах обоих полушариях</li>
@@ -78,9 +76,8 @@
         </ul>
       </div>
     </section>
-    <section class="places">
+    <section class="places" id="places">
         <div class="places__inner">
-        <a name="places"></a>
           <div class="places__info">
             <h2 class="places__title">Где и когда</h2>
             <ul class="places__list places__list--mobile">
@@ -100,9 +97,8 @@
           <div class="places__map"><img src="img/facts-map.jpg" alt=""></div>
         </div>
     </section>
-    <section class="reviews">
+    <section class="reviews" id="reviews">
       <div class="reviews__inner">
-      <a name="reviews"></a>
         <h2 class="reviews__title">Отзывы</h2>
         <div class="review__slider">
           <div class="review">
@@ -206,9 +202,8 @@
             </div>
 
     <!-- The end of modal window -->
-    <section class="contacts">
+    <section class="contacts" id="contacts">
       <div class="contacts__inner">
-      <a name="contacts"></a>
         <h2 class="contacts__title">Контакты</h2>
         <div class="contacts__item-wrapper">
           <div class="contacts__item">
@@ -262,9 +257,8 @@
       </div>
     </section>
 
-    <section class="price">
+    <section class="price" id="price">
       <div class="price__inner">
-      <a name="price"></a>
         <h2 class="price__title">Цены </h2>
         <ul class="price__list">
           <li class="price__item"><a href="#finland" class="price__link is-active">Финляндия</a></li>
@@ -311,12 +305,12 @@
             </tr>
             <tr>
               <td>Неллим</td>
-              <td>Nellim Wilderness Hotel, 40 км от Ивало</td>
+              <td>Nellim Wilderness Hotel, 40&nbsp;км от Ивало</td>
               <td>250 000 руб/чел</td>
             </tr>
             <tr>
               <td>Неллим</td>
-              <td>Nellim Wilderness Hotel, 40 км от Ивало</td>
+              <td>Nellim Wilderness Hotel, 40&nbsp;км от Ивало</td>
               <td>250 000 руб/чел</td>
             </tr>
           </table>
@@ -363,12 +357,12 @@
             <tr>
               <td>Аляска</td>
               <td>Отель “Сияние”, 5&nbsp;км&nbsp;от&nbsp;города</td>
-              <td>250 000 руб/чел</td>
+              <td>110 000 руб/чел</td>
             </tr>
             <tr>
               <td>Аляска</td>
               <td>Отель “Сияние”, 5&nbsp;км&nbsp;от&nbsp;города</td>
-              <td>250 000 руб/чел</td>
+              <td>110 000 руб/чел</td>
             </tr>
           </table>
           <table border="1" id="iceland" class="price__table">
@@ -380,12 +374,12 @@
             <tr>
               <td>Исландия</td>
               <td>Отель “Сияние”, 5&nbsp;км&nbsp;от&nbsp;города</td>
-              <td>250 000 руб/чел</td>
+              <td>222 000 руб/чел</td>
             </tr>
             <tr>
               <td>Исландия</td>
               <td>Отель “Сияние”, 5&nbsp;км&nbsp;от&nbsp;города</td>
-              <td>250 000 руб/чел</td>
+              <td>222 000 руб/чел</td>
             </tr>
           </table>
           <table border="1" id="murmansk" class="price__table">
@@ -397,12 +391,12 @@
             <tr>
               <td>Мурманск</td>
               <td>Отель “Сияние”, 5&nbsp;км&nbsp;от&nbsp;города</td>
-              <td>250 000 руб/чел</td>
+              <td>100 000 руб/чел</td>
             </tr>
             <tr>
               <td>Мурманск</td>
               <td>Отель “Сияние”, 5&nbsp;км&nbsp;от&nbsp;города</td>
-              <td>250 000 руб/чел</td>
+              <td>100 000 руб/чел</td>
             </tr>
           </table>
         <a href="#" class="offers">Посмотреть все предложения по Финляндии</a>
@@ -415,6 +409,7 @@
       <p class="footer__info">Телефон для справок: <a href="tel:+79211234567">+7 (921) 123-45-67</a></p>
     </div>
   </footer>
+<!-- <script src="js/jquery.mb.browser.js"></script> -->
 <script src="js/script.min.js"></script>
 </body>
 </html>

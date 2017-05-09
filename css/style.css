@@ -756,7 +756,7 @@ template {
     color: #e6fffd; }
   .main-nav__link {
     color: #e6fffd;
-    text-decoration: none; }
+    cursor: pointer; }
 
 .main-title__head {
   font-family: Nord;
