@@ -1203,17 +1203,21 @@ template {
   .price__link--active:after {
     content: "";
     display: block;
-    height: 4px;
-    width: 4px;
+    height: 5px;
+    width: 5px;
     border-top: 1px solid #000;
     border-right: 1px solid #000;
     transform: rotate(135deg);
     position: absolute;
-    top: 4px;
+    top: 5px;
     left: 70px;
     border-color: #89c1a1; }
   .price__list--mobile {
     display: none; }
+  .price__table {
+    display: none; }
+  .price__table.is-active {
+    display: table; }
   .price__table {
     text-align: center;
     border: 1px solid #d0d0d0;
@@ -1481,7 +1485,7 @@ template {
     height: 15px; }
   .review__slider .slick-dots{
     top: 258px;
-    max-width: 20%; }
+    max-width: 22%; }
   .review__slider .slick-dots li{
     width: 15px;
     height: 15px;
@@ -1577,7 +1581,58 @@ template {
   .review__desc{
     font-size: 16px; }
   .review__text{
-    font-size: 16px; } }
+    font-size: 16px;
+    padding: 4% 5%;
+    margin-left: 9%; }
+  .review__text:before{
+    border-right: 40px solid #f7f7f7;
+    left: -40px; }
+  .contacts{
+    min-height: 500px; }
+  .contacts__title{
+    padding-top: 56px;
+    font-size: 30px; }
+  .contacts__item{
+    width: 16.6%;
+    padding: 0; }
+  .contacts__item:before{
+    top: 31px;
+    left: 0; }
+  .contacts__item-title{
+    font-size: 20px;
+    padding-left: 6px; }
+  .price__title{
+    font-size: 30px;
+    padding-top: 60px; }
+  .price__list{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 96%; }
+  .price__link{
+    font-size: 20px; }
+  .price__link--active:after{
+    left: 110px; }
+  .price__table th{
+    font-size: 16px;
+    line-height: 2.25;
+    padding: 13px 86px; }
+  .price__table th:nth-child(2){
+    padding: 13px 116px; }
+  .price__table td{
+    font-size: 16px;
+    line-height: 2.25;
+    padding: 16px; }
+  .offers{
+    font-size: 16px;
+    line-height: 2.25; }
+  .footer__inner{
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+  .footer__info{
+    font-size: 16px;
+    line-height: 2.25; } }
   @media (min-width: 768px) and (min-width: 1024px){
   .slick-prev{
     top: 54%; }
@@ -1593,6 +1648,8 @@ template {
     content: "";
     width: 50px;
     height: 56px;
-    background-image: url("../img/a-desktop.png"); } }
+    background-image: url("../img/a-desktop.png"); }
+  .contacts__item-info{
+    font-size: 14px; } }
 
 /*# sourceMappingURL=style.css.map */
