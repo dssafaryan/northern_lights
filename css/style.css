@@ -457,6 +457,7 @@ template {
   height: 100%;
   min-height: 1px;
   margin-right: 4px;
+  outline: none;
   display: none; }
   [dir="rtl"] .slick-slide {
     float: right; }
@@ -659,6 +660,9 @@ template {
 
 .slick-prev {
   left: 0; }
+
+body {
+  cursor: default; }
 
 .header {
   background: url(../img/bg-header.jpg) no-repeat;
@@ -1198,9 +1202,9 @@ template {
       position: absolute;
       top: 4px;
       right: -20px; }
-  .price__link--active {
+  .price .is-active {
     color: #89c1a1; }
-  .price__link--active:after {
+  .price .is-active:after {
     content: "";
     display: block;
     height: 5px;
@@ -1612,7 +1616,7 @@ template {
     width: 96%; }
   .price__link{
     font-size: 20px; }
-  .price__link--active:after{
+  .price .is-active:after{
     left: 110px; }
   .price__table th{
     font-size: 16px;
