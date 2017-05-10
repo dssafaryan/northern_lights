@@ -2,6 +2,10 @@
   background-color: #f7f7f7;
   overflow: hidden;
 
+  @media (min-width: $screen-lg) {
+      min-height: 300px;
+  }
+
   &__inner {
     max-width: 1170px;
     padding: 0 10px;
@@ -17,6 +21,11 @@
     margin-top: 0;
     padding-top: 34px;
     padding-bottom: 40px;
+
+    @media (min-width: $screen-lg) {
+      font-size: $text-big;
+      padding-top: 60px;
+    }
   }
 
   &__list {
@@ -45,6 +54,13 @@
       padding-top: 14px;
       padding-bottom: 0px;
     }
+
+    @media (min-width: $screen-lg) {
+      font-size: $text-small;
+      line-height: 1.88;
+      padding-top: 20px;
+      width: 33%;
+    }
   }
 
   &__item:before {
@@ -61,6 +77,11 @@
     @media (min-width: $screen-sm) {
       top: -5px;
       left: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 15px;
+      height: 15px;
     }
   }
 
@@ -95,5 +116,10 @@
     line-height: 1.87;
     color: $grey-light;
     top: -40px;
+
+    @media (min-width: $screen-lg) {
+      font-size: 45px;
+      top: -62px;
+    }
   }
 }

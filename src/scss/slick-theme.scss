@@ -124,6 +124,10 @@ $slick-opacity-not-active: 0.25 !default;
     @media (min-width: 768px) {
       left: 44px;
     }
+    @media (min-width: 1024px) {
+      top: 340px;
+      left: 57px;
+    }
     li {
         position: relative;
         display: inline-block;
@@ -138,6 +142,11 @@ $slick-opacity-not-active: 0.25 !default;
           width: 10px;
           margin: 0 8px;
           height: 10px;
+        }
+        @media (min-width: 1024px) {
+          width: 15px;
+          height: 15px;
+          margin: 0 14px;
         }
         button {
             border: 0;
@@ -155,6 +164,10 @@ $slick-opacity-not-active: 0.25 !default;
             @media (min-width: 768px) {
               width: 10px;
               height: 10px;
+            }
+            @media (min-width: 1024px) {
+              width: 15px;
+              height: 15px;
             }
             &:hover, &:focus {
                 outline: none;
@@ -181,6 +194,10 @@ $slick-opacity-not-active: 0.25 !default;
                 @media (min-width: 768px) {
                   width: 10px;
                   height: 10px;
+                }
+                @media (min-width: 1024px) {
+                  width: 15px;
+                  height: 15px;
                 }
             }
         }
@@ -201,10 +218,16 @@ $slick-opacity-not-active: 0.25 !default;
     margin: 0;
     left: 100px;
     width: 100%;
-    max-width: 200px;
+    max-width: 66%;
 
     @media (min-width: 768px) {
       left: 40%;
+      max-width: 20%;
+    }
+
+    @media (min-width: 1024px) {
+      top: 258px;
+      max-width: 22%;
     }
 
     li {
@@ -222,6 +245,11 @@ $slick-opacity-not-active: 0.25 !default;
           height: 10px;
           margin: 0 8px;
         }
+        @media (min-width: 1024px) {
+            width: 15px;
+            height: 15px;
+            margin: 0 14px;
+        }
         button {
             border: 0;
             background: transparent;
@@ -238,6 +266,10 @@ $slick-opacity-not-active: 0.25 !default;
             @media (min-width: 768px) {
               width: 10px;
               height: 10px;
+            }
+            @media (min-width: 1024px) {
+              width: 15px;
+              height: 15px;
             }
             &:hover, &:focus {
                 outline: none;
@@ -264,6 +296,11 @@ $slick-opacity-not-active: 0.25 !default;
                 @media (min-width: 768px) {
                   width: 10px;
                   height: 10px;
+                }
+
+                @media (min-width: 1024px) {
+                  width: 15px;
+                  height: 15px;
                 }
             }
         }
@@ -310,6 +347,10 @@ $slick-opacity-not-active: 0.25 !default;
   top: 49%;
   z-index: 1;
 
+  @media (min-width: 1024px) {
+   top: 54%;
+    }
+
   &:before {
     content: "";
     width: 33px;
@@ -318,12 +359,26 @@ $slick-opacity-not-active: 0.25 !default;
     background-repeat: no-repeat;
     background-size: 100%;
   }
+
+  @media (min-width: 1024px) {
+   &:before {
+    content: "";
+    width: 50px;
+    height: 56px;
+    background-image: url('../img/a-desktop.png');
+  }
+    }
 }
 
 .slick-next {
   right: -40px;
   top: 48%;
   z-index: 1;
+
+  @media (min-width: 1024px) {
+   right: -50px;
+   top: 54%;
+    }
 
   &:before {
     content: "";
@@ -334,6 +389,14 @@ $slick-opacity-not-active: 0.25 !default;
     transform: rotate(180deg);
     background-size: 100%;
   }
+  @media (min-width: 1024px) {
+   &:before {
+    content: "";
+    width: 50px;
+    height: 56px;
+    background-image: url('../img/a-desktop.png');
+  }
+}
 }
 
 }

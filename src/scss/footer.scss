@@ -8,6 +8,10 @@
     padding: 0 10px;
     display: flex;
     align-items: center;
+
+    @media (min-width: $screen-lg) {
+      justify-content: flex-end;
+    }
   }
 
   &__info {
@@ -16,6 +20,11 @@
     font-weight: $font-weight-l;
     line-height: 3;
     color: #ffffff;
+
+    @media (min-width: $screen-lg) {
+      font-size: $text-small;
+      line-height: 2.25;
+    }
   }
 
   &__info a {

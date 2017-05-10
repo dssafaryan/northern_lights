@@ -1,4 +1,7 @@
 body {
+
+  cursor: default;
+
   @media (min-width: $screen-sm) {
     background-color: #eaeaec;
   }
@@ -22,11 +25,18 @@ body {
     background-size: inherit;
   }
 
+  @media (min-width: $screen-lg) {
+    background-size: cover;
+    min-height: 654px;
+    background-position: bottom;
+  }
+
+
   &__inner {
-  padding-left: 10px;
-  padding-right: 10px;
-  max-width: 1170px;
-  margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 1170px;
+    margin: 0 auto;
   }
 }
 
@@ -43,15 +53,15 @@ body {
   user-select: none;
 
   &:before {
-  border: 1px solid #000;
-  border-radius: 50%;
-  position: absolute;
-  top: -20px;
-  left: -11px;
-  display: block;
-  width: 38px;
-  height: 38px;
-  content: '';
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: -11px;
+    display: block;
+    width: 38px;
+    height: 38px;
+    content: '';
   }
 
   &:before {
@@ -189,17 +199,25 @@ body {
     margin-bottom: 18px;
   }
 
+  @media (min-width: $screen-lg) {
+    padding-left: 0;
+  }
+
   }
 
   &__description {
-  font-family: $jura;
-  font-size: $text-small;
-  font-weight: $font-weight-l;
-  color: $cyan;
+    font-family: $jura;
+    font-size: $text-small;
+    font-weight: $font-weight-l;
+    color: $cyan;
 
   @media (min-width: $screen-sm) {
     font-size: $text-medium;
     padding-left: 88px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-left: 0;
   }
 
   }
@@ -220,6 +238,7 @@ body {
 
   @media (min-width: $screen-lg) {
     display: block;
+    padding-top: 0;
   }
 
 
@@ -232,6 +251,12 @@ body {
     font-size: $text-12;
     font-family: $ubuntu;
     font-weight: $font-weight-l;
+
+    @media (min-width: $screen-lg) {
+      font-size: $text-small;
+      position: relative;
+      top: 58%;
+    }
   }
 }
 
@@ -239,11 +264,6 @@ body {
   position: absolute;
   top: 24px;
   left: 7px;
-}
 
-.sprite-slider-arrow {
-    width: 50px;
-    height: 56px;
-    background-position: -5px -5px;
 }
 

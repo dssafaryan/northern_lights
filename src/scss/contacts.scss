@@ -5,6 +5,14 @@
   background-position: 40% 80%;
   min-height: 300px;
 
+  @media (min-width: $screen-sm) {
+    min-height: 630px;
+  }
+
+  @media (min-width: $screen-lg) {
+    min-height: 500px;
+  }
+
   &__inner {
     max-width: 1170px;
     margin: 0 auto;
@@ -19,6 +27,15 @@
     color: #ffffff;
     margin-top: 0;
     padding-top: 40px;
+
+    @media (min-width: $screen-sm) {
+      padding-top: 46px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-top: 56px;
+      font-size: $text-big;
+    }
   }
 
   &__item-wrapper {
@@ -41,8 +58,14 @@
     padding-left: 8px;
 
     @media (min-width: $screen-sm) {
-      width: 23.8%;
+      width: 23.9%;
       height: 100%;
+      padding-bottom: 34px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 16.6%;
+      padding: 0;
     }
   }
 
@@ -56,30 +79,59 @@
     background-color: #89c1a1;
     top: 19px;
     left: 4px;
+
+    @media (min-width: $screen-lg) {
+      top: 31px;
+      left: 0;
+    }
   }
 
   &__item:nth-child(n) {
     order: 1;
+
+    @media (min-width: $screen-sm) {
+      order: 1;
+    }
   }
 
   &__item:nth-child(2) {
     order: 3;
+
+    @media (min-width: $screen-sm) {
+      order: 2;
+    }
   }
 
   &__item:nth-child(3) {
     order: 5;
+
+    @media (min-width: $screen-sm) {
+      order: 3;
+    }
   }
 
   &__item:nth-child(4) {
     order: 2;
+
+    @media (min-width: $screen-sm) {
+      order: 4;
+    }
   }
 
   &__item:nth-child(5) {
     order: 4;
+
+    @media (min-width: $screen-sm) {
+      order: 5;
+    }
   }
 
   &__item:nth-child(6) {
     order: 6;
+
+    @media (min-width: $screen-sm) {
+      order: 6;
+    }
   }
 
 
@@ -90,6 +142,11 @@
     line-height: 1.71;
     color: #ffffff;
     margin-left: 20px;
+
+    @media (min-width: $screen-lg) {
+      font-size: $text-medium;
+      padding-left: 6px;
+    }
   }
 
 
@@ -104,6 +161,17 @@
       line-height: 1.67;
       color: #ffffff;
       text-decoration: none;
+      min-height: 30px;
+
+      @media (min-width: $screen-lg) {
+        font-size: $text-smallest;
+      }
+    }
+  }
+
+  &__item-info--pushbottom {
+    @media (min-width: $screen-sm) {
+      padding-bottom: 34px;
     }
   }
 }

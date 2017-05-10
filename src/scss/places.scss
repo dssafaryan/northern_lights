@@ -1,6 +1,10 @@
 .places {
   overflow: hidden;
 
+  @media (min-width: $screen-lg) {
+    min-height: 531px;
+  }
+
   &:after {
     content: '';
     display: table;
@@ -9,7 +13,6 @@
 
   &__inner {
     max-width: 1170px;
-    padding: 0 10px;
     margin: 0 auto;
   }
 
@@ -20,13 +23,25 @@
     line-height: 0.94;
     color: $violet-light;
     padding-top: 6px;
+
+    @media (min-width: $screen-lg) {
+      padding-top: 30px;
+      font-size: $text-big;
+    }
   }
 
   &__info {
+    box-sizing: border-box;
+    padding: 0 10px;
 
     @media (min-width: $screen-sm) {
       width: 43%;
       float: right;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 45%;
+      padding: 0 26px;
     }
   }
 
@@ -37,6 +52,12 @@
     line-height: 1.57;
     color: $violet-light;
     padding-top: 12px;
+
+    @media (min-width: $screen-lg) {
+      font-size: $text-small;
+      line-height: 1.88;
+      padding-top: 48px;
+    }
   }
 
   &__list {
@@ -52,6 +73,11 @@
     font-weight: $font-weight-l;
     line-height: 1.88;
     position: relative;
+
+    @media (min-width: $screen-lg) {
+      font-size: $text-small;
+      padding-left: 10px;
+    }
   }
 
   &__item:before {
@@ -62,6 +88,13 @@
     height: 10px;
     top: 4px;
     left: -18px;
+
+    @media (min-width: $screen-lg) {
+      width: 15px;
+      height: 15px;
+      top: 8px;
+      left: -20px;
+    }
   }
 
   &__item--pink:before {
@@ -109,6 +142,12 @@
       @media (min-width: $screen-sm) {
         max-width: 428px;
         max-height: 330px;
+      }
+
+      @media (min-width: $screen-lg) {
+        width: 100%;
+        max-width: 670px;
+        min-height: 531px;
       }
     }
 

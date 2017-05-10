@@ -16,8 +16,8 @@ $('.slider').slick({
   speed: 300,
   slidesToShow: 1,
   adaptiveHeight: true,
-  autoplay: false,
-  autoplaySpeed: 2000,
+  autoplay: true,
+  autoplaySpeed: 3000,
 });
 
 $('.review__slider').slick({
@@ -51,17 +51,10 @@ $('.review__slider').slick({
   ]
 });
 
-// // Scritp for Price Section
-// $('.price-tabs__link').on('click', function(event){
-//   event.preventDefault();
-//     $(this).toggleClass('price-tabs__link--active');
-
-//       $('#price-finland').show();
-
-//   });
-
 
 $('.contacts__item-title').click(function(){
+
+  if ( $(window).width() > 425 ) { return; }
 
   var getN = $(this).attr('data-value-modal-number');
 
@@ -78,4 +71,43 @@ function hideModalContent(n)
   $('.modal__layer').fadeOut(300);
 }
 
+var tabs = document.querySelectorAll('.price__list .price__item a');
+var contents = document.querySelectorAll('.price__table');
 
+function changeTab(event) {
+
+  $(".price__item .price__link").removeClass('is-active');
+  $(this).addClass('is-active');
+
+  for (var i=0; i<tabs.length; i++){
+    tabs[i].parentNode.classList.remove('is-active');
+  }
+  event.target.parentNode.classList.add('is-active');
+  for (var i=0; i<contents.length; i++) {
+    contents[i].classList.remove('is-active');
+  }
+  var link = event.target.getAttribute('href');
+  document.querySelector(link).classList.add('is-active');
+}
+
+
+for (var i=0; i<tabs.length; i++){
+  tabs[i].addEventListener('click', changeTab);
+}
+
+
+$(document).ready(function(){
+  $("#menu").on("click","a", function (event) {
+    //отменяем стандартную обработку нажатия по ссылке
+    event.preventDefault();
+
+    //забираем идентификатор бока с атрибута href
+    var id  = $(this).attr('href'),
+
+    //узнаем высоту от начала страницы до блока на который ссылается якорь
+      top = $(id).offset().top;
+
+    //анимируем переход на расстояние - top за 1500 мс
+    $('body').animate({scrollTop: top}, 1500);
+  });
+});

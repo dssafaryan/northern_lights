@@ -2,6 +2,10 @@
   background-color: #b2dad0;
   min-height: 270px;
 
+  @media (min-width: $screen-lg) {
+    min-height: 442px;
+  }
+
   &__inner {
     max-width: 1170px;
     padding: 0 10px;
@@ -16,6 +20,11 @@
     margin-top: 0;
     padding: 30px 0 20px;
     color: #212027;
+
+    @media (min-width: $screen-lg) {
+      font-size: $text-big;
+      padding-top: 70px;
+    }
   }
 }
 
@@ -34,6 +43,11 @@
      width: 105px;
      height: 95px;
     }
+
+    @media (min-width: $screen-lg) {
+      width: 170px;
+      height: 150px;
+    }
   }
 
   &__desc {
@@ -46,6 +60,10 @@
 
     @media (min-width: $screen-sm) {
       width: 100%;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: $text-small;
     }
   }
 
@@ -67,6 +85,12 @@
       margin-left: 36px;
       width: 48%;
     }
+
+    @media (min-width: $screen-lg) {
+      font-size: $text-small;
+      padding: 4% 5%;
+      margin-left: 9%;
+    }
   }
 
   &__text:before {
@@ -79,6 +103,11 @@
     border-top: 0px solid transparent;
     border-left: 0px solid transparent;
     border-right: 30px solid #f7f7f7;
+
+    @media (min-width: $screen-lg) {
+      border-right: 40px solid #f7f7f7;
+      left: -40px;
+    }
   }
 
   &:last-child {

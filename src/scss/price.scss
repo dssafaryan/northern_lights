@@ -14,12 +14,24 @@
     line-height: 0.97;
     color: $violet-light;
     padding-top: 10px;
+
+    @media (min-width: $screen-lg) {
+      font-size: $text-big;
+      padding-top: 60px;
+    }
   }
 
   &__list {
     padding-left: 0;
     list-style: none;
     padding-top: 10px;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      justify-content: space-between;
+      width: 96%;
+    }
+
   }
 
   &__item {
@@ -36,6 +48,10 @@
     text-decoration: none;
     position: relative;
 
+    @media (min-width: $screen-lg) {
+      font-size: $text-medium;
+    }
+
     &:after {
       content: "";
       display: block;
@@ -46,26 +62,30 @@
       transform: rotate(45deg);
       position: absolute;
       top: 4px;
-      right: -20px;;
+      right: -20px;
     }
   }
 
-  &__link--active {
+  .is-active {
       color: #89c1a1;
   }
 
-  &__link--active:after {
+  .is-active:after {
       content: "";
       display: block;
-      height: 4px;
-      width: 4px;
+      height: 5px;
+      width: 5px;
       border-top: 1px solid #000;
       border-right: 1px solid #000;
       transform: rotate(135deg);
       position: absolute;
-      top: 4px;
+      top: 5px;
       left: 70px;
       border-color: #89c1a1;
+
+      @media (min-width: $screen-lg) {
+        left: 110px;
+      }
   }
 
 
@@ -74,19 +94,24 @@
     display: none;
 
     @media (min-width: $screen-sm) {
-    display: flex;
+      display: flex;
     }
   }
 
   &__list--desktop {
 
     @media (min-width: $screen-sm) {
-    display: none;
+      display: none;
     }
+
   }
 
-  &__content {
+  &__table {
+    display: none;
+  }
 
+  &__table.is-active {
+    display: table;
   }
 
   &__table {
@@ -102,6 +127,16 @@
       color: $violet-dark;
       padding: 8px 28px;
       border-right: 1px solid #d0d0d0;
+
+      @media (min-width: $screen-lg) {
+        font-size: $text-small;
+        line-height: 2.25;
+        padding: 13px 86px;
+
+        &:nth-child(2) {
+          padding: 13px 116px;
+        }
+      }
     }
 
     td {
@@ -112,6 +147,12 @@
       border-right: 1px solid #d0d0d0;
       color: $violet-dark;
       padding: 6px 8px;
+
+      @media (min-width: $screen-lg) {
+        font-size: $text-small;
+        line-height: 2.25;
+        padding: 16px;
+      }
     }
   }
 }
@@ -125,4 +166,9 @@
   padding-top: 24px;
   padding-bottom: 50px;
   display: block;
+
+  @media (min-width: $screen-lg) {
+    font-size: $text-small;
+    line-height: 2.25;
+  }
 }
