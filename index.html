@@ -17,13 +17,13 @@
         <span></span>
       </div>
       <nav class="main-nav" id="nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item"><span onclick="goId('legends')" class="main-nav__link main-nav__link--active">Легенды</span></li>
-          <li class="main-nav__item"><span onclick="goId('facts')" class="main-nav__link">Факты</span></li>
-          <li class="main-nav__item"><span onclick="goId('places')" class="main-nav__link">Где и когда</span></li>
-          <li class="main-nav__item"><span onclick="goId('price')" class="main-nav__link">Цены на отели</span></li>
-          <li class="main-nav__item"><span onclick="goId('reviews')" class="main-nav__link">Отзывы</span></li>
-          <li class="main-nav__item"><span onclick="goId('contacts')" class="main-nav__link">Контакты</span></li>
+        <ul class="main-nav__list" id="menu">
+          <li class="main-nav__item"><a href="#legends" class="main-nav__link main-nav__link--active">Легенды</a></li>
+          <li class="main-nav__item"><a href="#facts" class="main-nav__link">Факты</a></li>
+          <li class="main-nav__item"><a href="#places" class="main-nav__link">Где и когда</a></li>
+          <li class="main-nav__item"><a href="#price" class="main-nav__link">Цены на отели</a></li>
+          <li class="main-nav__item"><a href="#reviews" class="main-nav__link">Отзывы</a></li>
+          <li class="main-nav__item"><a href="#contacts" class="main-nav__link">Контакты</a></li>
         </ul>
       </nav>
 
@@ -261,12 +261,12 @@
       <div class="price__inner">
         <h2 class="price__title">Цены </h2>
         <ul class="price__list">
-          <li class="price__item"><a href="#finland" class="price__link is-active">Финляндия</a></li>
-          <li class="price__item"><a href="#norway" class="price__link">Норвегия</a></li>
-          <li class="price__item"><a href="#yakutia" class="price__link">Якутия</a></li>
-          <li class="price__item"><a href="#alaska" class="price__link">Аляска</a></li>
-          <li class="price__item"><a href="#iceland" class="price__link">Исландия</a></li>
-          <li class="price__item"><a href="#murmansk" class="price__link">Мурманск</a></li>
+          <li class="price__item"><a href="#finland" onclick="event.preventDefault()" class="price__link is-active">Финляндия</a></li>
+          <li class="price__item"><a href="#norway" onclick="event.preventDefault()" class="price__link">Норвегия</a></li>
+          <li class="price__item"><a href="#yakutia" onclick="event.preventDefault()" class="price__link">Якутия</a></li>
+          <li class="price__item"><a href="#alaska" onclick="event.preventDefault()" class="price__link">Аляска</a></li>
+          <li class="price__item"><a href="#iceland" onclick="event.preventDefault()" class="price__link">Исландия</a></li>
+          <li class="price__item"><a href="#murmansk" onclick="event.preventDefault()" class="price__link">Мурманск</a></li>
         </ul>
           <table border="1" id="finland" class="price__table is-active">
             <tr>
@@ -380,7 +380,6 @@
       <p class="footer__info">Телефон для справок: <a href="tel:+79211234567">+7 (921) 123-45-67</a></p>
     </div>
   </footer>
-<!-- <script src="js/jquery.mb.browser.js"></script> -->
 <script src="js/script.min.js"></script>
 </body>
 </html>

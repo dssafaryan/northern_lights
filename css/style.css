@@ -760,7 +760,7 @@ body {
     color: #e6fffd; }
   .main-nav__link {
     color: #e6fffd;
-    cursor: pointer; }
+    text-decoration: none; }
 
 .main-title__head {
   font-family: Nord;
