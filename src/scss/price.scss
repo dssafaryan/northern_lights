@@ -27,9 +27,10 @@
     padding-top: 10px;
 
     @media (min-width: $screen-lg) {
-      display: flex;
+      width: 93%;
+      display: inline-flex;
       justify-content: space-between;
-      width: 96%;
+      margin-top: 0;
     }
 
   }
@@ -41,6 +42,7 @@
     line-height: 1.3;
     color: $dark-blue-grey;
     padding-bottom: 30px;
+    position: relative;
   }
 
   &__link {
@@ -55,14 +57,15 @@
     &:after {
       content: "";
       display: block;
-      height: 5px;
-      width: 5px;
-      border-top: 1px solid #000;
-      border-right: 1px solid #000;
+      height: 6px;
+      width: 6px;
+      border-top: 1px solid #494949;
+      border-right: 1px solid #494949;
       transform: rotate(45deg);
       position: absolute;
-      top: 4px;
+      top: 3px;
       right: -20px;
+      transition: all 0.8s ease;
     }
   }
 
@@ -71,21 +74,11 @@
   }
 
   .is-active:after {
-      content: "";
-      display: block;
-      height: 5px;
-      width: 5px;
-      border-top: 1px solid #000;
-      border-right: 1px solid #000;
+      height: 6px;
+      width: 6px;
       transform: rotate(135deg);
-      position: absolute;
       top: 5px;
-      left: 70px;
       border-color: #89c1a1;
-
-      @media (min-width: $screen-lg) {
-        left: 110px;
-      }
   }
 
 
@@ -106,12 +99,12 @@
 
   }
 
-  &__table {
+  &__content {
     display: none;
   }
 
-  &__table.is-active {
-    display: table;
+  &__content.is-active {
+    display: block;
   }
 
   &__table {

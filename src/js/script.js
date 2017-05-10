@@ -72,11 +72,12 @@ function hideModalContent(n)
 }
 
 var tabs = document.querySelectorAll('.price__list .price__item a');
-var contents = document.querySelectorAll('.price__table');
+var contents = document.querySelectorAll('.price__content');
 
 function changeTab(event) {
 
   $(".price__item .price__link").removeClass('is-active');
+  event.preventDefault();
   $(this).addClass('is-active');
 
   for (var i=0; i<tabs.length; i++){
