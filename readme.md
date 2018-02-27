@@ -6,14 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="format-detection" content="telephone=no"/>
-    <title>Тайтл</title>
-    <style type="text/css">
-        a{
-        outline:none;
-        color:#006ab6;
-        text-decoration:underline;
-        }
-    </style>
     <!--[if (gte mso 9)|(IE)]>
     <style type="text/css">
         table { border-collapse: collapse; }
